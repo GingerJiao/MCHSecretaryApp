@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  MCHSecretary
+
+  Created by 朱进 on 16/8/6.
+  Copyright © 2016年 朱进. All rights reserved.
+*/
+SearchContent="大家都在搜:";
+AppDownNumber="次下载";
+AppDownload="下载";
+AppDetailDownload="立即下载";
+DownLoadUnit="万";
+AppComment="个评论";
+SegmentFirst="详细信息";
+SegmentSecond="用户评论";
+SegmentThird="相关推荐";
+
+BackText="返回";
+DetailsTitle="软件详情";
+ContentDescribe="内容简介";
+UpdateLogs="更新日志";
+VersionInfo="版本信息";
+VersionNumber="版本";
+AppSize="大小";
+AppUpdateData="更新日期";
+AppType="类别";
+AppLanguage="语言";
+AppDeveloper="开发商";
+AppCompatible="兼容性";
+CurrentComment="当前版本";
+
+ChoiceTopType="分类";
+ChoiceTopNecessary="必备";
+ChoiceTopList="榜单";
+ChoiceTopSubject="专题";
+
+/*
+ * 网络状态
+ */
+HTTPError="网络错误";
+HTTPStatusException="服务器接口异常";
+HTTPDataException="数据解析异常";
+
+
+
+
