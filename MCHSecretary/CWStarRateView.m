@@ -101,7 +101,7 @@
 
 -(NSString *)starImageName:(BOOL)isBottom{
     NSString *starName = @"";
-    NSLog(@"%d", mStyleType);
+//    NSLog(@"%d", mStyleType);
     switch (mStyleType) {
         case StarStyle_Gray:
             if (isBottom) {
