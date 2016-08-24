@@ -23,6 +23,52 @@
             </objects>
             <point key="canvasLocation" x="-2065" y="-1067"/>
         </scene>
+        <!--软件-->
+        <scene sceneID="bb4-bo-8GF">
+            <objects>
+                <viewController id="mAf-z2-umS" customClass="APPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ng3-5s-qS7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kff-qq-HPN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lC2-Fq-TAl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOb-Zn-gQt" customClass="TopSearchView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KQX-2U-v8b"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="0x0-6e-dIT">
+                                <rect key="frame" x="0.0" y="70" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CyO-sS-EVF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0x0-6e-dIT" firstAttribute="leading" secondItem="lC2-Fq-TAl" secondAttribute="leadingMargin" constant="-20" id="BfD-ts-mqm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0x0-6e-dIT" secondAttribute="trailing" constant="-20" id="PrW-eL-kg3"/>
+                            <constraint firstItem="MOb-Zn-gQt" firstAttribute="top" secondItem="Ng3-5s-qS7" secondAttribute="bottom" id="RG5-RU-qer"/>
+                            <constraint firstItem="0x0-6e-dIT" firstAttribute="top" secondItem="MOb-Zn-gQt" secondAttribute="bottom" id="XQf-9n-vkH"/>
+                            <constraint firstItem="MOb-Zn-gQt" firstAttribute="leading" secondItem="lC2-Fq-TAl" secondAttribute="leadingMargin" constant="-20" id="elq-KQ-9jS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MOb-Zn-gQt" secondAttribute="trailing" constant="-20" id="kSV-Ui-ZA5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="软件" image="tabbtn_app_unselect.png" selectedImage="tabbtn_app_select.png" id="WeI-fI-vlz"/>
+                    <connections>
+                        <outlet property="searchView" destination="MOb-Zn-gQt" id="Tne-e0-OBW"/>
+                        <outlet property="smallScrollView" destination="0x0-6e-dIT" id="v12-h3-aOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MM9-wI-Ijk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="-289"/>
+        </scene>
         <!--游戏-->
         <scene sceneID="Zr3-02-agp">
             <objects>
@@ -263,6 +309,7 @@
                     <connections>
                         <segue destination="Gdy-v8-wlo" kind="relationship" relationship="viewControllers" id="pRB-Gj-9nX"/>
                         <segue destination="cnN-Ph-OW5" kind="relationship" relationship="viewControllers" id="BVM-Oq-KPz"/>
+                        <segue destination="mAf-z2-umS" kind="relationship" relationship="viewControllers" id="10c-I2-sNB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wB2-bc-Mh0" userLabel="First Responder" sceneMemberID="firstResponder"/>

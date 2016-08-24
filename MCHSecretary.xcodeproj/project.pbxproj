@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AB537FF1D6C343C0084FCA1 /* APPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB537FE1D6C343C0084FCA1 /* APPViewController.m */; };
+		5AB538051D6C3AD50084FCA1 /* RecommandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB538041D6C3AD50084FCA1 /* RecommandView.m */; };
+		5AB538081D6C43220084FCA1 /* RichTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB538071D6C43220084FCA1 /* RichTableViewCell.m */; };
+		5AB5380F1D6C56F10084FCA1 /* RichHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5380E1D6C56F10084FCA1 /* RichHeadView.m */; };
 		5AEFAB331D6BF9C4007DEADE /* star_blue_upper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEFAB2E1D6BF9C4007DEADE /* star_blue_upper.png */; };
 		5AEFAB341D6BF9C4007DEADE /* star_gray_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEFAB2F1D6BF9C4007DEADE /* star_gray_bottom.png */; };
 		5AEFAB351D6BF9C4007DEADE /* star_gray_upper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEFAB301D6BF9C4007DEADE /* star_gray_upper.png */; };
@@ -121,6 +125,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AB537FD1D6C343C0084FCA1 /* APPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPViewController.h; sourceTree = "<group>"; };
+		5AB537FE1D6C343C0084FCA1 /* APPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPViewController.m; sourceTree = "<group>"; };
+		5AB538031D6C3AD50084FCA1 /* RecommandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommandView.h; sourceTree = "<group>"; };
+		5AB538041D6C3AD50084FCA1 /* RecommandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommandView.m; sourceTree = "<group>"; };
+		5AB538061D6C43220084FCA1 /* RichTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichTableViewCell.h; sourceTree = "<group>"; };
+		5AB538071D6C43220084FCA1 /* RichTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichTableViewCell.m; sourceTree = "<group>"; };
+		5AB5380C1D6C50760084FCA1 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		5AB5380D1D6C56F10084FCA1 /* RichHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichHeadView.h; sourceTree = "<group>"; };
+		5AB5380E1D6C56F10084FCA1 /* RichHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichHeadView.m; sourceTree = "<group>"; };
 		5AEFAB2E1D6BF9C4007DEADE /* star_blue_upper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_blue_upper.png; path = Images/star_blue_upper.png; sourceTree = "<group>"; };
 		5AEFAB2F1D6BF9C4007DEADE /* star_gray_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_gray_bottom.png; path = Images/star_gray_bottom.png; sourceTree = "<group>"; };
 		5AEFAB301D6BF9C4007DEADE /* star_gray_upper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_gray_upper.png; path = Images/star_gray_upper.png; sourceTree = "<group>"; };
@@ -367,6 +380,7 @@
 				B78FA1C21D531E100092A043 /* LaunchScreen.storyboard */,
 				B78FA1C51D531E100092A043 /* Info.plist */,
 				B78FA1B41D531E100092A043 /* Supporting Files */,
+				5AB5380C1D6C50760084FCA1 /* Header.h */,
 			);
 			path = MCHSecretary;
 			sourceTree = "<group>";
@@ -422,6 +436,10 @@
 				B7EBFBC11D66DD740038A06E /* DetailDescribeView.m */,
 				B7EBFBC31D66F5B60038A06E /* DetailCommentView.h */,
 				B7EBFBC41D66F5B60038A06E /* DetailCommentView.m */,
+				5AB538031D6C3AD50084FCA1 /* RecommandView.h */,
+				5AB538041D6C3AD50084FCA1 /* RecommandView.m */,
+				5AB5380D1D6C56F10084FCA1 /* RichHeadView.h */,
+				5AB5380E1D6C56F10084FCA1 /* RichHeadView.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -463,6 +481,8 @@
 				B7E759B01D5DC9A8008C7ED8 /* SearchViewController.m */,
 				B76CAE311D5EC3C000A0D261 /* DetailsInfoViewController.h */,
 				B76CAE321D5EC3C000A0D261 /* DetailsInfoViewController.m */,
+				5AB537FD1D6C343C0084FCA1 /* APPViewController.h */,
+				5AB537FE1D6C343C0084FCA1 /* APPViewController.m */,
 			);
 			name = ViewControll;
 			sourceTree = "<group>";
@@ -580,6 +600,8 @@
 				B7E759241D597D66008C7ED8 /* NomalCell.m */,
 				B7E759671D5B0EAC008C7ED8 /* CycleScrollCell.h */,
 				B7E759681D5B0EAC008C7ED8 /* CycleScrollCell.m */,
+				5AB538061D6C43220084FCA1 /* RichTableViewCell.h */,
+				5AB538071D6C43220084FCA1 /* RichTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -851,6 +873,7 @@
 				B7E758F61D587DFE008C7ED8 /* MJRefreshBackFooter.m in Sources */,
 				B76CAE491D61BEB600A0D261 /* DetailSegmentView.m in Sources */,
 				B7E759521D59874D008C7ED8 /* UIButton+WebCache.m in Sources */,
+				5AB537FF1D6C343C0084FCA1 /* APPViewController.m in Sources */,
 				B7E759791D5C8140008C7ED8 /* ChoiceCycleAppRequest.m in Sources */,
 				B7E759531D59874D008C7ED8 /* UIImage+GIF.m in Sources */,
 				B78FA1B91D531E100092A043 /* AppDelegate.m in Sources */,
@@ -872,6 +895,7 @@
 				B7E759661D5B0C86008C7ED8 /* StringUtils.m in Sources */,
 				B7E758FF1D587DFE008C7ED8 /* MJRefreshBackStateFooter.m in Sources */,
 				B7E758C51D5867D1008C7ED8 /* ChoiceViewController.m in Sources */,
+				5AB5380F1D6C56F10084FCA1 /* RichHeadView.m in Sources */,
 				B7E759621D5AFCC4008C7ED8 /* CycleScrollerView.m in Sources */,
 				B7E758F51D587DFE008C7ED8 /* MJRefreshAutoFooter.m in Sources */,
 				B7E759571D59874D008C7ED8 /* UIImageView+WebCache.m in Sources */,
@@ -883,6 +907,8 @@
 				B7E7597C1D5C8174008C7ED8 /* BaseNetManager.m in Sources */,
 				B7E7591A1D596D4D008C7ED8 /* AppPacketInfo.m in Sources */,
 				B7E759761D5C6E27008C7ED8 /* DialogTipView.m in Sources */,
+				5AB538081D6C43220084FCA1 /* RichTableViewCell.m in Sources */,
+				5AB538051D6C3AD50084FCA1 /* RecommandView.m in Sources */,
 				B7E7594D1D59874D008C7ED8 /* SDWebImageDecoder.m in Sources */,
 				B7E7594C1D59874D008C7ED8 /* SDWebImageCompat.m in Sources */,
 				B7E759561D59874D008C7ED8 /* UIImageView+HighlightedWebCache.m in Sources */,
