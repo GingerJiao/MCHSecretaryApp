@@ -23,7 +23,6 @@ DetailSegmentDeleget
 
 @property (nonatomic, strong) AppPacketInfo *appInfo;
 
-
 @property (weak, nonatomic) IBOutlet UIView *infoView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *detailScrollView;

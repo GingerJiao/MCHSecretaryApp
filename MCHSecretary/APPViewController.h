@@ -12,7 +12,10 @@
 @interface APPViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet TopSearchView *searchView;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *smallScrollView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *baseScrollView;
 
 @property(nonatomic,retain)UILabel *backLab;
 

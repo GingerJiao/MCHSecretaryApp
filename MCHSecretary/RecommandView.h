@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NomalCell.h"
+
 @interface RecommandView : UIView<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) NSMutableArray *listItemArray;
 
 @end

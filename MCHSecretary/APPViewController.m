@@ -10,6 +10,11 @@
 
 #import "RecommandView.h"
 
+#import "RankingView.h"
+
+#import "ClassifyView.h"
+
+#import "NecessaryView.h"
 
 @interface APPViewController ()
 
@@ -21,20 +26,36 @@
 
 #define PointY _smallScrollView.frame.origin.y + _smallScrollView.frame.size.height
 
-#define Heigh self.view.frame.size.height - PointY
+#define Heigh _baseScrollView.frame.size.height
 
 @implementation APPViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
+    [super.navigationController setToolbarHidden:YES animated:TRUE];
+}
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     [self initSmallScrollView];
     
-    RecommandView *recommandView = [[RecommandView alloc]initWithFrame:CGRectMake(0, PointY, Width, Heigh)];
+    _baseScrollView.contentSize = CGSizeMake(Width * 4, Heigh);
     
+    //默认显示的“推荐”
     
-    [self.view addSubview:recommandView];
+    RecommandView *recommandView = [[RecommandView alloc]initWithFrame:CGRectMake(0,0, Width, Heigh)];
     
+    recommandView.tag = 101;
+    
+    recommandView.backgroundColor = [UIColor cyanColor];
+    
+    [_baseScrollView addSubview:recommandView];
+
     // Do any additional setup after loading the view.
 }
 
@@ -46,7 +67,7 @@
     
     _backLab = [[UILabel alloc]init];
     
-    _backLab.frame = CGRectMake(row, 0, 50, 50);
+    _backLab.frame = CGRectMake(row, 5, 50, 40);
     
     _backLab.alpha = 0.5;
     
@@ -81,10 +102,64 @@
 }
 -(void)buttonClicked:(UIButton *)clickedBtn
 {
+    UIView *vie;
+    
     _backLab.frame = clickedBtn.frame;
     
     NSLog(@"==%ld",(long)clickedBtn.tag);
+    
+     //点击不同的选项，界面切换
+    
+    if (clickedBtn.tag == 11 )
+    {
+        [_baseScrollView setContentOffset:CGPointMake(0, 0)];
+    }
+    else if (clickedBtn.tag == 13)
+    {
+        vie = [self.view viewWithTag:103];
+        
+        if (!vie)
+        {
+            RankingView *rankingView = [[RankingView alloc]initWithFrame:CGRectMake(Width *2,0, Width, Heigh)];
+            
+            rankingView.tag = 103;
+            
+            [_baseScrollView addSubview:rankingView];
+        }
+        [_baseScrollView setContentOffset:CGPointMake(Width * 2, 0)];
+    }
+    else if (clickedBtn.tag == 14)
+    {
+        vie = [self.view viewWithTag:104];
+        
+        if (!vie)
+        {
+            NecessaryView *necessaryView = [[NecessaryView alloc]initWithFrame:CGRectMake(Width *3,0, Width, Heigh)];
+            
+            necessaryView.tag = 104;
+            
+            [_baseScrollView addSubview:necessaryView];
+        }
+        
+        [_baseScrollView setContentOffset:CGPointMake(Width * 3, 0)];
+    }
+    else
+    {
+        vie = [self.view viewWithTag:102];
+        
+        if (!vie)
+        {
+            ClassifyView *classifyView = [[ClassifyView alloc]initWithFrame:CGRectMake(Width,0, Width, Heigh)];
+            
+            classifyView.tag = 102;
+            
+            [_baseScrollView addSubview:classifyView];
+        }
+
+         [_baseScrollView setContentOffset:CGPointMake(Width, 0)];
+    }
 }
+
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

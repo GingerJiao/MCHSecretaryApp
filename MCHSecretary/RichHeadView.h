@@ -10,6 +10,19 @@
 
 @interface RichHeadView : UIView
 
+//推荐
+
+@property(nonatomic,assign)int num;
+
+@property(nonatomic,retain)UIButton *textButton;
+
+@property(nonatomic,retain)UILabel *specialLab;
+
+@property(nonatomic,retain)UIButton *imageButton;
+
+-(void)loadHeadViewForRecommandView;
+
+//排行
 @property(nonatomic,retain)UIButton *obveFirstBtn;
 
 @property(nonatomic,retain)UIButton *obveSecondBtn;
@@ -18,5 +31,15 @@
 
 @property(nonatomic,retain)UIButton *obveFouthBtn;
 
+-(void)loadHeadViewForRankingView;
+
+//专题详情
+@property(nonatomic,retain)UIImageView *imgView;
+
+@property(nonatomic,retain)UILabel *titleLab;
+
+@property(nonatomic,retain)UILabel *detailLab;
+
+-(void)loadHeadViewForSpecialDetailView;
 
 @end

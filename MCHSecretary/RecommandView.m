@@ -8,9 +8,19 @@
 
 #import "RecommandView.h"
 
-#import "RichTableViewCell.h"
+#import "NomalCell.h"
+
+#import "Header.h"
 
 #import "RichHeadView.h"
+
+#import "DetailsInfoViewController.h"
+
+#import "APPViewController.h"
+
+#import "SpecialDetailsViewContoller.h"
+
+#import "RecustomTableViewCell.h"
 
 @implementation RecommandView
 
@@ -20,17 +30,14 @@
     
     if (self)
     {
-        
-        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStyleGrouped];
+        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, mScreenHeight) style:UITableViewStyleGrouped];
         
         tableView.dataSource = self;
         
         tableView.delegate = self;
         
-        tableView.separatorStyle = 0;
-        
-        [tableView registerClass:[RichTableViewCell class] forCellReuseIdentifier:@"cell"];
-        
+        tableView.separatorStyle = 1;
+
         [self addSubview:tableView];
         
     }
@@ -39,61 +46,95 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    RichTableViewCell *cell = [[RichTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        
-    [cell.blowFirstBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    [cell.blowSecondBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    static NSString *CellIdentifier = @"Cell";
     
-    [cell.blowThirdBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    RecustomTableViewCell *cell = (RecustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    [cell.blowFouthBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    if (!cell) {
         
-    [cell.blowFifthBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    [cell.blowSixthBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    [cell.blowSeventhBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([RecustomTableViewCell class])
+                                              owner:self
+                                            options:nil] objectAtIndex:0];
+    }
     
     return cell;
-    
+
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    return 200;
-    
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 100;
-}
--(void)buttonClicked:(UIButton *)clicked
-{
-
-    NSLog(@"===%ld",(long)clicked.tag);
+    return 140;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
+    RichHeadView *headView = [[RichHeadView alloc]initWithFrame:CGRectMake(0, 0, mScreenWidth, 150)];
     
-    RichHeadView *headView = [[RichHeadView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
-
-
-    [headView.obveFirstBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    [headView.obveSecondBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    [headView.obveThirdBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
-    [headView.obveFouthBtn addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
+    if (section != 0)
+    {
+        headView.num =2;
+    }
+    
+    [headView loadHeadViewForRecommandView];
+    
+    [headView.textButton addTarget:self action:@selector(buttonclick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [headView.imageButton addTarget:self action:@selector(buttonclick:) forControlEvents:UIControlEventTouchUpInside];
+    
     return headView;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 150;
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.1;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    for (UIView *next=[self superview]; next; next=next.superview)
+    {
+        UIResponder *response=[next nextResponder];
+        
+        if ([response isKindOfClass:[APPViewController class]])
+        {
+            APPViewController *main= (APPViewController *)response;
+            
+            DetailsInfoViewController *detailsView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"detailsinfo"];
+            
+            [main.navigationController pushViewController:detailsView animated:YES];
+        }
+    }
+}
+-(void)buttonclick:(UIButton *)btn
+{
+    for (UIView *next=[self superview]; next; next=next.superview)
+    {
+        UIResponder *response=[next nextResponder];
+        
+        if ([response isKindOfClass:[APPViewController class]])
+        {
+            APPViewController *main= (APPViewController *)response;
+            
+            SpecialDetailsViewContoller *specialDetailVC = [[SpecialDetailsViewContoller alloc]init];
+            
+            [main.navigationController pushViewController:specialDetailVC animated:YES];
+        }
+    }
 
+}
+-(void)pushToDetailInfoViewController
+{
+    
 }
 /*
 // Only override drawRect: if you perform custom drawing.

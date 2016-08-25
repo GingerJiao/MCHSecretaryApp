@@ -10,10 +10,6 @@
 
 #import "Header.h"
 
-#define BtnWidth 80
-
-#define BtnHeight 80
-
 @implementation RichTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -31,7 +27,7 @@
 
 -(void)addSubview
 {
-    float width = mScreenWidth/5;
+    float width = (mScreenWidth - 40)/5;
     
     _blowFirstBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -39,9 +35,17 @@
     
     _blowFirstBtn.tag = 21;
     
-    [_blowFirstBtn setTitle:@"男生" forState:UIControlStateNormal];
+    [_blowFirstBtn setImage:[UIImage imageNamed:@"love"] forState:UIControlStateNormal];
     
-    _blowFirstBtn.frame = CGRectMake(0, 10, width*2, width *2);
+    [_blowFirstBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [_blowFirstBtn setTitle:@"影视娱乐" forState:UIControlStateNormal];
+    
+    [_blowFirstBtn setImageEdgeInsets:UIEdgeInsetsMake(-width/2, width/2, 0, 0)];
+    
+    [_blowFirstBtn setTitleEdgeInsets:UIEdgeInsetsMake(width, -width, 0, 0)];
+
+    _blowFirstBtn.frame = CGRectMake(20, 10, width*2, width *2);
     
     [self addSubview:_blowFirstBtn];
     

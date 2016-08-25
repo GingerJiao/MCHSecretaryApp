@@ -48,19 +48,27 @@
                                     <constraint firstAttribute="height" constant="50" id="CyO-sS-EVF"/>
                                 </constraints>
                             </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnz-TT-E7O">
+                                <rect key="frame" x="0.0" y="120" width="600" height="431"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0x0-6e-dIT" firstAttribute="leading" secondItem="lC2-Fq-TAl" secondAttribute="leadingMargin" constant="-20" id="BfD-ts-mqm"/>
+                            <constraint firstItem="Kff-qq-HPN" firstAttribute="top" secondItem="Xnz-TT-E7O" secondAttribute="bottom" id="N2y-yW-Ktu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0x0-6e-dIT" secondAttribute="trailing" constant="-20" id="PrW-eL-kg3"/>
                             <constraint firstItem="MOb-Zn-gQt" firstAttribute="top" secondItem="Ng3-5s-qS7" secondAttribute="bottom" id="RG5-RU-qer"/>
                             <constraint firstItem="0x0-6e-dIT" firstAttribute="top" secondItem="MOb-Zn-gQt" secondAttribute="bottom" id="XQf-9n-vkH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xnz-TT-E7O" secondAttribute="trailing" constant="-20" id="Y4L-7r-edO"/>
+                            <constraint firstItem="Xnz-TT-E7O" firstAttribute="top" secondItem="0x0-6e-dIT" secondAttribute="bottom" id="a30-3W-d5H"/>
+                            <constraint firstItem="Xnz-TT-E7O" firstAttribute="leading" secondItem="lC2-Fq-TAl" secondAttribute="leadingMargin" constant="-20" id="csd-SL-WWl"/>
                             <constraint firstItem="MOb-Zn-gQt" firstAttribute="leading" secondItem="lC2-Fq-TAl" secondAttribute="leadingMargin" constant="-20" id="elq-KQ-9jS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MOb-Zn-gQt" secondAttribute="trailing" constant="-20" id="kSV-Ui-ZA5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="软件" image="tabbtn_app_unselect.png" selectedImage="tabbtn_app_select.png" id="WeI-fI-vlz"/>
                     <connections>
+                        <outlet property="baseScrollView" destination="Xnz-TT-E7O" id="UzJ-Yl-g7J"/>
                         <outlet property="searchView" destination="MOb-Zn-gQt" id="Tne-e0-OBW"/>
                         <outlet property="smallScrollView" destination="0x0-6e-dIT" id="v12-h3-aOG"/>
                     </connections>
