@@ -30,7 +30,7 @@
     
     if (self)
     {
-        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, mScreenHeight) style:UITableViewStyleGrouped];
+        UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, mScreenHeight - 60) style:UITableViewStyleGrouped];
         
         tableView.dataSource = self;
         

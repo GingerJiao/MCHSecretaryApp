@@ -28,8 +28,8 @@
     
     [super awakeFromNib];
     
-    [self.iconButton.layer setCornerRadius:20];
-    self.iconButton.layer.masksToBounds = YES;
+    [self.iconImage.layer setCornerRadius:20];
+    self.iconImage.layer.masksToBounds = YES;
     
     [self.downBtn.layer setCornerRadius:5];
     self.downBtn.layer.masksToBounds = YES;

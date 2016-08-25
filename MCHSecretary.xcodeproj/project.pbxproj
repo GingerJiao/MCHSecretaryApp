@@ -11,6 +11,8 @@
 		5AB538051D6C3AD50084FCA1 /* RecommandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB538041D6C3AD50084FCA1 /* RecommandView.m */; };
 		5AB538081D6C43220084FCA1 /* RichTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB538071D6C43220084FCA1 /* RichTableViewCell.m */; };
 		5AB5380F1D6C56F10084FCA1 /* RichHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5380E1D6C56F10084FCA1 /* RichHeadView.m */; };
+		5AB6F9A41D6E836100426FC6 /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6F9A21D6E836100426FC6 /* RankingTableViewCell.m */; };
+		5AB6F9A51D6E836100426FC6 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6F9A31D6E836100426FC6 /* RankingTableViewCell.xib */; };
 		5AB904681D6D2CE500BD43F8 /* RankingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB904671D6D2CE500BD43F8 /* RankingView.m */; };
 		5AB9046B1D6D42C600BD43F8 /* ClassifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB9046A1D6D42C600BD43F8 /* ClassifyView.m */; };
 		5AB9046E1D6D442000BD43F8 /* NecessaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB9046D1D6D442000BD43F8 /* NecessaryView.m */; };
@@ -141,6 +143,9 @@
 		5AB5380C1D6C50760084FCA1 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		5AB5380D1D6C56F10084FCA1 /* RichHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichHeadView.h; sourceTree = "<group>"; };
 		5AB5380E1D6C56F10084FCA1 /* RichHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichHeadView.m; sourceTree = "<group>"; };
+		5AB6F9A11D6E836100426FC6 /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewCell.h; sourceTree = "<group>"; };
+		5AB6F9A21D6E836100426FC6 /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewCell.m; sourceTree = "<group>"; };
+		5AB6F9A31D6E836100426FC6 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
 		5AB904661D6D2CE500BD43F8 /* RankingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingView.h; sourceTree = "<group>"; };
 		5AB904671D6D2CE500BD43F8 /* RankingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingView.m; sourceTree = "<group>"; };
 		5AB904691D6D42C600BD43F8 /* ClassifyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassifyView.h; sourceTree = "<group>"; };
@@ -633,6 +638,9 @@
 				5AB904781D6D9B1F00BD43F8 /* RecustomTableViewCell.h */,
 				5AB904791D6D9B1F00BD43F8 /* RecustomTableViewCell.m */,
 				5AB9047A1D6D9B1F00BD43F8 /* RecustomTableViewCell.xib */,
+				5AB6F9A11D6E836100426FC6 /* RankingTableViewCell.h */,
+				5AB6F9A21D6E836100426FC6 /* RankingTableViewCell.m */,
+				5AB6F9A31D6E836100426FC6 /* RankingTableViewCell.xib */,
 				5AB538061D6C43220084FCA1 /* RichTableViewCell.h */,
 				5AB538071D6C43220084FCA1 /* RichTableViewCell.m */,
 			);
@@ -851,6 +859,7 @@
 				B7DC76811D5594580001D952 /* Localizable.strings in Resources */,
 				B78FA1C11D531E100092A043 /* Assets.xcassets in Resources */,
 				B7E759AD1D5DBACD008C7ED8 /* tabbtn_game_unselect.png in Resources */,
+				5AB6F9A51D6E836100426FC6 /* RankingTableViewCell.xib in Resources */,
 				B7EBFBBB1D66B2FD0038A06E /* love.png in Resources */,
 				B7E759A61D5DB928008C7ED8 /* tabbtn_app_unselect@2x.png in Resources */,
 				B7E759AB1D5DBACD008C7ED8 /* tabbtn_game_select.png in Resources */,
@@ -891,6 +900,7 @@
 				B7E759011D587DFE008C7ED8 /* MJRefreshNormalHeader.m in Sources */,
 				B7E759051D587DFE008C7ED8 /* NSBundle+MJRefresh.m in Sources */,
 				B7E759021D587DFE008C7ED8 /* MJRefreshStateHeader.m in Sources */,
+				5AB6F9A41D6E836100426FC6 /* RankingTableViewCell.m in Sources */,
 				B7E759B11D5DC9A8008C7ED8 /* SearchViewController.m in Sources */,
 				B7E759001D587DFE008C7ED8 /* MJRefreshGifHeader.m in Sources */,
 				5AB904681D6D2CE500BD43F8 /* RankingView.m in Sources */,

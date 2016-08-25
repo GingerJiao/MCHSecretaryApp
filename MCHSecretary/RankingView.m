@@ -12,6 +12,9 @@
 
 #import "APPViewController.h"
 
+#import "RankingTableViewCell.h"
+
+
 @implementation RankingView
 
 -(id)initWithFrame:(CGRect)frame
@@ -28,8 +31,6 @@
         
         tableView.separatorStyle = 1;
         
-        [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-        
         [self addSubview:tableView];
     }
     
@@ -37,19 +38,31 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
-    cell.textLabel.text = @"自定义单元格";
+    static NSString *CellIdentifier = @"Cell";
+    
+    RankingTableViewCell *cell = (RankingTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        
+        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([RankingTableViewCell class])
+                                              owner:self
+                                            options:nil] objectAtIndex:0];
+    }
     
     return cell;
-}
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+    
+}-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0.1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 140;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TopSearchView.h"
 
-@interface APPViewController : UIViewController
+@interface APPViewController : UIViewController<UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet TopSearchView *searchView;
 
